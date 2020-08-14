@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EmployeeCalendarAPI</name>
+    </assembly>
+    <members>
+        <member name="M:EmployeeCalendarAPI.Controllers.CalendarEventsController.GetCalendarEvents">
+            <summary>
+            Action to retrieve all calendar events
+            </summary>
+            <returns>Returns a list of all calendar events or an empty list, if no calendar event is created yet</returns>
+            <response code="200">Returned if the list of calendar events was retrieved</response>
+            <response code="400">Returned if the list of calendar events could not be retrieved</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.CalendarEventsController.GetCalendarEventById(System.Int32)">
+            <summary>
+            Action to retrieve one calendar event by id
+            </summary>
+            <returns>Returns calendar event</returns>
+            <response code="200">Returned if the calendar event was retrieved</response>
+            <response code="400">Returned if the calendar event could not be retrieved</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.CalendarEventsController.GetAllCalendarEventsByEmployeeId(System.Int32)">
+            <summary>
+            Action to get all calendar events for given employee 
+            </summary>            
+            <param name="id">Id of employee</param>      
+            <returns>Returns a list of all calendar events or an empty list, if there is no event for given employee</returns>
+            <response code="200">Returned if the list of calendar events was retrieved</response>
+            <response code="400">Returned if the list of calendar events could not be retrieved</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.CalendarEventsController.GetAllCalendarEventsInInterval(System.String,System.String)">
+            <summary>
+            Action to get all calendar events between two dates in ISO formats
+            </summary>
+            <param name="start">Start date time of the interval in ISO format / 2020-8-11T04:20:00</param>        
+            <param name="end">End date time of the interval in ISO format / 2020-8-11T04:20:00</param>    
+            <returns>Returns a list of all calendar events or an empty list, if no calendar event is matching requirements</returns>
+            <response code="200">Returned if the list of calendar events was retrieved</response>
+            <response code="400">Returned if the list of calendar events could not be retrieved</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.CalendarEventsController.GetAllCalendarEventsInIntervalByEmployeeId(System.String,System.String,System.Int32)">
+            <summary>
+            Action to get all calendar events between two dates in ISO formats for given employee 
+            </summary>
+            <param name="start">Start date time of the interval in ISO format / 2020-8-11T04:20:00</param>        
+            <param name="end">End date time of the interval in ISO format / 2020-8-11T04:20:00</param>         
+            <param name="id">Id of employee</param>      
+            <returns>Returns a list of all calendar events or an empty list, if no calendar event is matching requirements</returns>
+            <response code="200">Returned if the list of calendar events was retrieved</response>
+            <response code="400">Returned if the list of calendar events could not be retrieved</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.CalendarEventsController.PutCalendarEvent(System.Int32,EmployeeCalendarAPI.Models.CalendarEvent)">
+            <summary>
+            Action to update calendar event 
+            </summary>
+            <param name="id">Id of calendar event to update</param>    
+            <param name="calendarEvent">Object to update a new calendar event</param>      
+            <response code="200">Returned if the calendar event was updated</response>
+            <response code="400">Returned if the calendar event could not be updated</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.CalendarEventsController.PostCalendarEvent(EmployeeCalendarAPI.Models.CalendarEvent)">
+            <summary>
+            Action to crete new calendar event 
+            </summary>
+            <param name="calendarEvent">Object to create a new calendar event </param>      
+            <returns>Returns created calendar event</returns>
+            <response code="200">Returned if the calendar event was created</response>
+            <response code="400">Returned if the calendar event could not be created</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.CalendarEventsController.DeleteCalendarEvent(System.Int32)">
+            <summary>
+            Action to delete calendar event 
+            </summary>
+            <param name="id">Id of calendar event to be deleted</param>      
+            <returns>Returns deleted calendar event</returns>
+            <response code="200">Returned if the calendar event was deleted</response>
+            <response code="400">Returned if the calendar event could not be deleted</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.CalendarEventTypesController.GetCalendarEventTypeTypes">
+            <summary>
+            Action to retrieve all calendar event types
+            </summary>
+            <returns>Returns a list of all calendar event types or an empty list, if no calendar event type is created yet</returns>
+            <response code="200">Returned if the list of calendar event types was retrieved</response>
+            <response code="400">Returned if the list of calendar event types could not be retrieved</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.CalendarEventTypesController.GetCalendarEventTypeById(System.Int32)">
+            <summary>
+            Action to retrieve one calendar event type by id
+            </summary>
+            <returns>Returns calendar event type</returns>
+            <response code="200">Returned if the calendar event type was retrieved</response>
+            <response code="400">Returned if the calendar event type could not be retrieved</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.CalendarEventTypesController.PutCalendarEventType(System.Int32,EmployeeCalendarAPI.Models.CalendarEventType)">
+            <summary>
+            Action to update calendar event type
+            </summary>
+            <param name="id">Id of calendar event type to update</param>    
+            <param name="calendarEventType">Object to update a new calendar event type</param>      
+            <response code="200">Returned if the calendar event type was updated</response>
+            <response code="400">Returned if the calendar event type could not be updated</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.CalendarEventTypesController.PostCalendarEventType(EmployeeCalendarAPI.Models.CalendarEventType)">
+            <summary>
+            Action to crete new calendar event type
+            </summary>
+            <param name="calendarEventType">Object to create a new calendar event type</param>      
+            <returns>Returns created calendar event type</returns>
+            <response code="200">Returned if the calendar event type was created</response>
+            <response code="400">Returned if the calendar event type could not be created</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.CalendarEventTypesController.DeleteCalendarEventType(System.Int32)">
+            <summary>
+            Action to delete calendar event type
+            </summary>
+            <param name="id">Id of calendar event type to be deleted</param>      
+            <returns>Returns deleted calendar event type</returns>
+            <response code="200">Returned if the calendar event type was deleted</response>
+            <response code="400">Returned if the calendar event type could not be deleted</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.EmployeesController.GetEmployees">
+            <summary>
+            Action to retrieve all employees
+            </summary>
+            <returns>Returns a list of all employees or an empty list, if no employee is created yet</returns>
+            <response code="200">Returned if the list of employees was retrieved</response>
+            <response code="400">Returned if the list of employees could not be retrieved</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.EmployeesController.GetEmployeeById(System.Int32)">
+            <summary>
+            Action to retrieve one employee by id
+            </summary>
+            <returns>Returns employee</returns>
+            <response code="200">Returned if the employee was retrieved</response>
+            <response code="400">Returned if the employee could not be retrieved</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.EmployeesController.PutEmployee(System.Int32,EmployeeCalendarAPI.Models.Employee)">
+            <summary>
+            Action to update employee
+            </summary>
+            <param name="id">Id of employee to update</param>    
+            <param name="employee">Object to update a new employee</param>      
+            <response code="200">Returned if the employee was updated</response>
+            <response code="400">Returned if the employee could not be updated</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.EmployeesController.PostEmployee(EmployeeCalendarAPI.Models.Employee)">
+            <summary>
+            Action to crete new employee
+            </summary>
+            <param name="employee">Object to create a new employee</param>      
+            <returns>Returns created employee</returns>
+            <response code="200">Returned if the employee was created</response>
+            <response code="400">Returned if the employee could not be created</response>
+        </member>
+        <member name="M:EmployeeCalendarAPI.Controllers.EmployeesController.DeleteEmployee(System.Int32)">
+            <summary>
+            Action to delete employee
+            </summary>
+            <param name="id">Id of employee to be deleted</param>      
+            <returns>Returns deleted employee</returns>
+            <response code="200">Returned if the employee was deleted</response>
+            <response code="400">Returned if the employee could not be deleted</response>
+        </member>
+    </members>
+</doc>
