@@ -44,14 +44,14 @@ There is `main` landing component and `toolbar` component for navigation. Other 
 `employee-list` component provides list of all employees in system. By clicking on record, user is redirected to the `employee-detail`. 
 Possible future improvement could be filtering by name functionality.
 
-![Employee list](https://github.com/strasaa/events-app/blob/master/employee-list.png?raw=true)
+![Employee list page](https://github.com/strasaa/events-app/blob/master/employee-list.png?raw=true)
 
 The page Employees card is composed from two components `employee-detail` and `employee-events`. 
 It is used for showing employee detail and possible update. 
 Employee could be deleted by *Delete* button and same page is used with blank form if new employee is created. 
 This functionality is accessible with toolbar shortcut. 
 
-![Employee detail](https://github.com/strasaa/events-app/blob/master/employee-detail.png?raw=true)
+![Employee detail page](https://github.com/strasaa/events-app/blob/master/employee-detail-page.png?raw=true)
 
 Part of the Employees card is the events overview. 
 It shows all events of the employee in the interval. 
